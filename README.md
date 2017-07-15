@@ -18,12 +18,9 @@ Modern Browsers, Lightweight, Device Friendly, Skeleton Script.
 
 ---
 
-## TODO
+## TODO List
 
-- Write instructions on how to use the source code
-- Daisy chain animation events
-- Create Plan JavaScript stand alone version.
-- Add function to set animation play state.
+[View Issues](https://github.com/marcnewton/Toggle-Display-Animate/issues)
 
 ---
 
@@ -50,7 +47,7 @@ Place the jQuery Extension script before the closing `<body>` tag or after jQuer
 ```markdown
 TODO - Create pure standalone javascript version
 ```
-The standalone version can be placed in the document `<head`>
+The standalone version can be placed in the document `<head>`
 
 ---
 
@@ -70,7 +67,7 @@ There are 3 special css class names used for the functionality:
 <div id="my-element"></div>
 ````
 
-**Creating a key frame (CSS)**
+**Creating a key frame (LESS)**
 ```css
 .keyframes(myAnimation;{
 	0% {
@@ -83,7 +80,7 @@ There are 3 special css class names used for the functionality:
 });
 ```
 
-**Applying Animation to element (CSS)**
+**Applying Animation to element (LESS)**
 
 ```less
 #my-element {
