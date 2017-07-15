@@ -1,0 +1,129 @@
+// https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+.animation(@animation)
+{
+	-webkit-animation: @animation;
+	-moz-animation: @animation;
+	-o-animation: @animation;
+	animation: @animation;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-delay
+.animation-delay(@delay) {
+	-o-animation-delay: @delay;
+	-moz-animation-delay: @delay;
+	-webkit-animation-delay: @delay;
+	animation-delay: @delay;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-direction
+.animation-direction(@direction) {
+	-o-animation-direction: @direction;
+	-moz-animation-direction: @direction;
+	-webkit-animation-direction: @direction;
+	animation-direction: @direction;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-duration
+.animation-duration(@duration) {
+	-o-animation-duration: @duration;
+	-moz-animation-duration: @duration;
+	-webkit-animation-duration: @duration;
+	animation-duration: @duration;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-fill-mode
+.animation-fill-mode(@fill) {
+	-o-animation-fill-mode: @fill;
+	-moz-animation-fill-mode: @fill;
+	-webkit-animation-fill-mode: @fill;
+	animation-fill-mode: @fill;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-iteration-count
+.animation-iteration-count(@iteration) {
+	-o-animation-iteration-count: @iteration;
+	-moz-animation-iteration-count: @iteration;
+	-webkit-animation-iteration-count: @iteration;
+	animation-iteration-count: @iteration;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-name
+.animation-name(@name) {
+	-o-animation-name: @name;
+	-moz-animation-name: @name;
+	-webkit-animation-name: @name;
+	animation-name: @name;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-play-state
+.animation-play-state(@state) {
+	-o-animation-play-state: @state;
+	-moz-animation-play-state: @state;
+	-webkit-animation-play-state: @state;
+	animation-play-state: @state;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-timing-function
+.animation-timing-function(@timing) {
+	-o-animation-timing-function: @timing;
+	-moz-animation-timing-function: @timing;
+	-webkit-animation-timing-function: @timing;
+	animation-timing-function: @timing;
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+.keyframes(@name; @arguments) {
+	@-o-keyframes @name { @arguments(); }
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+
+
+.transition (@transition) {
+	-o-transition: @transition;
+	-moz-transition: @transition;
+	-webkit-transition: @transition;
+	transition: @transition
+}
+
+.transform(@string) {
+	-moz-transform: @string;
+	-o-transform: @string;
+	-webkit-transform: @string;
+	transform: @string;
+}
+
+.scale (@factor) {
+	.transform(scale(@factor));
+}
+
+.rotate (@deg) {
+	.transform(rotate(@deg));
+}
+
+.skew (@deg, @deg2) {
+	.transform(skew(@deg, @deg2));
+}
+
+.translate (@x, @y:0) {
+	.transform(translate(@x, @y));
+}
+
+.translate3d (@x, @y: 0, @z: 0) {
+	.transform(translate3d(@x, @y, @z));
+}
+
+.transform-origin (@x:center, @y:center) {
+	-o-transform-origin: @x @y;
+	-moz-transform-origin: @x @y;
+	-webkit-transform-origin: @x @y;
+	transform-origin: @x @y;
+}
+
+.perspective (@value: 1000) {
+	//-o-perspective: @value; Not supported?
+	-moz-perspective: @value;
+	-webkit-perspective: @value;
+	perspective: @value;
+}
