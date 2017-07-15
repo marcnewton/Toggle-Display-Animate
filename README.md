@@ -1,2 +1,3 @@
-# jQuery-Toggle-Display-Animate
-Support CSS3 Animations from display:none objects using only class toggles. A Super light weight solution.
+## jQuery Toggle Display CSS3 Ainmation
+
+Allow keyframe CSS3 animations and reversal of animations to run on elements styled with display property.
