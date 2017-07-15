@@ -6,6 +6,8 @@ Modern Browsers, Lightweight, Device Friendly, Skeleton Script.
 
 [View Demo](http://marcnewton.co.uk/projects/toggle-display-animate/)
 
+---
+
 ## Usage Case
 
 - The need to create lightweight bespoke animation solutions.
@@ -14,6 +16,8 @@ Modern Browsers, Lightweight, Device Friendly, Skeleton Script.
 - Animation to run in reverse or run different animation and then `display:none;` at the end of the animation.
 - Can be used to trigger animation events in general. Showing and hiding elements is optional.
 
+---
+
 ## TODO
 
 - Write instructions on how to use the source code
@@ -21,10 +25,14 @@ Modern Browsers, Lightweight, Device Friendly, Skeleton Script.
 - Create Plan JavaScript stand alone version.
 - Add function to set animation play state.
 
+---
+
 ## Dependencies
 
 - Any version of [jQuery](http://jquery.com/download/) loaded in the page `<head>` - _Tested with v3.2.1_
 _jQuery only required if you are not using the standalone version_
+
+---
 
 ## Quick Installation
 
@@ -46,10 +54,6 @@ The standalone version can be placed in the document `<head`>
 
 ---
 
-## How to use
-
-TODO - Write basic usage example
-
 ## Creating Animations
 
 Example below uses `import/animation/mixins`; helps you to write cross browser compatible animations.
@@ -60,13 +64,13 @@ There are 3 special css class names used for the functionality:
 * `.animatied` - The animation to use when displaying the element.
 * `.revert` - (Optional) The animation to use when hiding the object.
 
-1. *HTML Markup*
+**HTML Markup**
 
 ````html
 <div id="my-element"></div>
 ````
 
-2. *Creating a key frame (CSS)*
+**Creating a key frame (CSS)**
 ```css
 .keyframes(myAnimation;{
 	0% {
@@ -79,7 +83,7 @@ There are 3 special css class names used for the functionality:
 });
 ```
 
-3. *Applying Animation to element (CSS)*
+**Applying Animation to element (CSS)**
 
 ```less
 #my-element {
@@ -103,7 +107,7 @@ There are 3 special css class names used for the functionality:
 }
 ```
 
-4. *Fire an animation*
+**Trigger an animation**
 
 ```js
 	$(document).ready(function () {
