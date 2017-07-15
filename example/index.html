@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>CSS3 Toggle Display Animation</title>
+
+    <link rel="stylesheet" href="style-example.css" type="text/css" />
+	
+    <script type="application/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="application/javascript" src="../js/jquery-migrate-3.0.0.min.js"></script>
+    <script type="application/javascript" src="../js/jquery-toggleDisplayAnimation-0.0.1.js"></script>
+</head>
+<body>
+
+<button>Toggle</button>
+
+<div id="dashboard">
+    <div class="close">X</div>
+</div>
+    
+<script>
+(function($){
+
+    $(document).ready(function() {
+    
+        $('button').on('click', function (e) {
+
+            e.preventDefault();
+
+            $('#dashboard').toggleDisplay('dashboard').one('click', '.close', function() {
+                $('#dashboard').toggleDisplay('dashboard');
+            });
+
+        });
+        
+    });
+
+})(jQuery);
+</script>
+
+</body>
+
+</html>
