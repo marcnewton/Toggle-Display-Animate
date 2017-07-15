@@ -1,6 +1,6 @@
 @import "../animation/keyframes-dashboard";
 
-#dashboard-fade {
+.dashboard {
 
 	display:none;
 	z-index:999;
@@ -71,18 +71,39 @@
 		color:rgb(250,250,250);
 		background-color:#d7351f;
 	}
+}
+
+#dashboard-fade {
 
 	&.animated {
 		.animation('dashboard-fade');
-		.animation-duration(0.4s);
-		.animation-direction(normal);
+		.animation-duration(0.5s);
+	}
 
-		&.reverse {
-			.animation-direction(reverse);
-		}
+	&.revert {
+		.animation('dashboard-fade');
+		.animation-duration(0.3s);
+		.animation-direction(reverse);
 	}
 
 	&.display {
 		display:flex;
+	}
+}
+
+#dashboard-slide {
+
+	&.display {
+		display:flex;
+	}
+
+	&.animated {
+		.animation('dashboard-in');
+		.animation-duration(0.75s);
+	}
+
+	&.revert {
+		.animation('dashboard-out');
+		.animation-duration(0.5s);
 	}
 }

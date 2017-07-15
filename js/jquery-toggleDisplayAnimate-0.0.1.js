@@ -84,7 +84,7 @@ jQuery.eventIs = new eventIs();
 /**
  * Fires animation for forward play
  *
- * @option reverse bool Default true, If false the animation will not execute
+ * @option revert bool Default true, If false the revert animation will not execute
  *
  * @returns {jQuery}
  */
@@ -92,10 +92,10 @@ jQuery.fn.toggleDisplayAnimate = function()
 {
 	var self = this;
 
-	var event = jQuery.eventIs.animation();
+	var event = jQuery.eventIs.animation() + ' ' + jQuery.eventIs.transition();
 
 	var option = $.extend({
-		reverse: true
+		revert: true
 	}, this.data());
 
 	// Play forward animation
@@ -110,18 +110,19 @@ jQuery.fn.toggleDisplayAnimate = function()
 		return this;
 	}
 
-	// If reverse animation is enabled
-	if(option.reverse)
+	// If revert animation is enabled
+	if(option.revert)
 	{
-		// Play reverse animation
+		// Play revert animation
 		this.one(event, function() {
-			self.removeClass('animated reverse display');
-		}).addClass('animated reverse');
+			self.removeClass('revert display');
+		}).addClass('revert');
 
 		return this;
 	}
 
-	// If reverse is disable
+	// If revert is disable
 	this.removeClass('animated display');
 
+	return this
 };
