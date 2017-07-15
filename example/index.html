@@ -8,11 +8,11 @@
 
     <title>CSS3 Toggle Display Animation</title>
 
-    <link rel="stylesheet" href="style-example.css" type="text/css" />
+    <link rel="stylesheet" href="css/example.min.css" type="text/css" />
 	
-    <script type="application/javascript" src="../js/jquery-3.2.1.min.js"></script>
-    <script type="application/javascript" src="../js/jquery-migrate-3.0.0.min.js"></script>
-    <script type="application/javascript" src="../js/jquery-toggleDisplayAnimation-0.0.1.js"></script>
+    <script type="application/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="application/javascript" src="../js/jquery-toggleDisplayAnimate-0.0.1.js"></script>
+
 </head>
 <body>
 
@@ -21,27 +21,8 @@
 <div id="dashboard">
     <div class="close">X</div>
 </div>
-    
-<script>
-(function($){
 
-    $(document).ready(function() {
-    
-        $('button').on('click', function (e) {
-
-            e.preventDefault();
-
-            $('#dashboard').toggleDisplay('dashboard').one('click', '.close', function() {
-                $('#dashboard').toggleDisplay('dashboard');
-            });
-
-        });
-        
-    });
-
-})(jQuery);
-</script>
-
+<script type="application/javascript" src="js/example.js"></script>
 </body>
 
 </html>

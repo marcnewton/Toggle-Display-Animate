@@ -1,0 +1,61 @@
+@import "../animation/keyframes-dashboard";
+
+#dashboard {
+
+	display:none;
+	z-index:999;
+
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+
+	background-color:inherit;
+	font-size:18px;
+
+	> a {
+
+		text-align:center;
+		margin:7px;
+
+		div {
+			display:block;
+			width:64px;
+			height:64px;
+			border-radius:50%;
+			margin:3px auto;
+
+			background-color:#d8d8d8;
+		}
+
+		span {
+			display:block;
+			width: 128px;
+			padding:7px;
+		}
+	}
+
+	.close {
+		position:fixed;
+		z-index:1000;
+		top:0;
+		right:0;
+		margin:7px;
+		font-size:24px;
+	}
+
+	&.animated {
+		.animation('dashboard');
+		.animation-duration(0.4s);
+		.animation-direction(normal);
+
+		&.reverse {
+			.animation-direction(reverse);
+		}
+	}
+
+	&.display {
+		display:flex;
+	}
+}
