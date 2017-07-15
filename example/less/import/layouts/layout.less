@@ -7,5 +7,67 @@ html, body {
 }
 
 body {
+	background-color:rgb(250,250,250);
+	color:rgb(30,30,30);
+}
+
+body, button {
 	font-family:'Roboto Condensed', sans-serif, arial;
+}
+
+p, ul {
+	font-weight:lighter;
+}
+
+ul {
+	line-height:26px;
+}
+
+h4 {
+	font-size:24px;
+	text-align:left;
+}
+
+#app {
+
+	display:block;
+	margin:0 auto;
+	width:100%;
+	max-width:980px;
+	padding:0 32px;
+
+	border:1px solid rgb(230,230,230);
+	border-top:none;
+	border-bottom:none;
+
+	> div {
+
+		&.header {
+
+			text-align:center;
+
+			border-bottom:1px solid rgb(230,230,230);
+			margin-bottom:14px;
+
+			h1 {
+				color: #9952b7;
+			}
+		}
+	}
+
+	.example {
+
+		text-align:center;
+
+		button {
+			color:rgb(250,250,250);
+			font-size:18px;
+
+			border:none;
+			padding:14px 18px;
+			border-radius:7px;
+			background-color:#0f77dc;
+		}
+
+	}
 }

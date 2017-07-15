@@ -7,12 +7,22 @@
 
 $(document).ready(function() {
 
-	$('button').on('click', function (e) {
+	$('div.example').on('click', 'button', function (e) {
 
 		e.preventDefault();
 
-		$('#dashboard').toggleDisplayAnimate('dashboard').one('click', '.close', function() {
-			$('#dashboard').toggleDisplayAnimate('dashboard');
+		var option = $.extend({
+			fire: null
+		}, $(this).data());
+
+		var element = $(option.fire);
+
+		if(!element.length && console) {
+			console.error('Element not found for fire event... ' + option.fire);
+		}
+
+		element.toggleDisplayAnimate().one('click', '.close', function() {
+			element.toggleDisplayAnimate();
 		});
 
 	});
