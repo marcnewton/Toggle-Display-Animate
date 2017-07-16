@@ -81,6 +81,42 @@
 
 	$.animationEvents = new animationEvents();
 
+	$.fn.chainAnimation = function()
+	{
+		var params;
+		var element = $(this);
+
+		var option = {
+			next: element.data('animate-next'),
+			delay: parseInt(element.data('animate-delay'), null),
+			on: element.data('animate-on')
+		};
+
+		var event = function() {
+			$(option.next).chainAnimation();
+		};
+
+		if(option.on === 'start') {
+
+			params = {
+				onStart:event,
+				onStartDelay:option.delay
+			};
+
+		} else {
+
+			params = {
+				onEnd:event,
+				onEndDelay:option.delay
+			}
+		}
+
+		element.toggleDisplayAnimate(params);
+
+		return true;
+
+	};
+
 	/**
 	 * Fires animation for forward play
 	 *

@@ -39,11 +39,13 @@
 
 	});
 
+	$('.example').on('click', '.close', function() {
+		$(this).parent().toggleDisplayAnimate();
+	});
+
 	$.demoBasic = function(element)
 	{
-		element.toggleDisplayAnimate().one('click', '.close', function() {
-			element.toggleDisplayAnimate();
-		});
+		element.toggleDisplayAnimate();
 
 	};
 
@@ -86,10 +88,17 @@
 				element.find('.message').html('Patience is bliss!')
 			},
 			onEndDelay: 2000
-		}).one('click', '.close', function() {
-			element.toggleDisplayAnimate();
 		});
 
+	};
+
+	$.demoDaisy = function(element)
+	{
+		element.toggleDisplayAnimate({
+			onEnd: function() {
+				$('#info-one').chainAnimation();
+			}
+		});
 	};
 
 })(jQuery);

@@ -1,4 +1,4 @@
-@import "../animation/keyframes-dashboard";
+@import "../animation/keyframes-demo";
 
 .demo {
 
@@ -73,7 +73,7 @@
 	}
 }
 
-#demo-fade, #demo-callback, #demo-delay {
+#demo-fade, #demo-callback, #demo-delay, #demo-daisy {
 
 	&.animated {
 		.animation('dashboard-fade');
@@ -106,4 +106,27 @@
 		.animation('dashboard-out');
 		.animation-duration(0.5s);
 	}
+
 }
+
+#demo-daisy {
+
+	> div.info {
+		visibility:hidden;
+		margin:7px;
+		width:300px;
+		height:400px;
+		background-color:#0f77dc;
+
+		&.display {
+			visibility:visible;
+		}
+
+		&.animated {
+			.animation('daisyIn');
+			.animation-duration(0.3s);
+		}
+	}
+
+}
+
