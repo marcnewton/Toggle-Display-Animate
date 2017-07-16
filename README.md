@@ -6,7 +6,8 @@ Modern Browsers, Lightweight, Device Friendly, Skeleton Script.
 
 [View Demo](http://marcnewton.co.uk/projects/toggle-display-animate/)
 
-[View Project Taska](https://github.com/marcnewton/Toggle-Display-Animate/issues)
+[View Project Tasks](https://github.com/marcnewton/Toggle-Display-Animate/issues)
+
 ---
 
 ## Usage Case
