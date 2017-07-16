@@ -6,6 +6,7 @@ Modern Browsers, Lightweight, Device Friendly, Skeleton Script.
 
 [View Demo](http://marcnewton.co.uk/projects/toggle-display-animate/)
 
+[View Project Taska](https://github.com/marcnewton/Toggle-Display-Animate/issues)
 ---
 
 ## Usage Case
@@ -15,12 +16,6 @@ Modern Browsers, Lightweight, Device Friendly, Skeleton Script.
 - On an event to `display:block;` or `display:flex;` etc. the element followed by a CSS3 Animation.
 - Animation to run in reverse or run different animation and then `display:none;` at the end of the animation.
 - Can be used to trigger animation events in general. Showing and hiding elements is optional.
-
----
-
-## TODO List
-
-[View Issues](https://github.com/marcnewton/Toggle-Display-Animate/issues)
 
 ---
 
