@@ -21,8 +21,32 @@ $(document).ready(function() {
 			console.error('Element not found for fire event... ' + option.fire);
 		}
 
-		element.toggleDisplayAnimate().one('click', '.close', function() {
-			element.toggleDisplayAnimate();
+		element.toggleDisplayAnimate({
+			onStart: function() {
+
+				if(confirm('Are you sure you want to open the dashboard?')) {
+
+					element.on('click', '.close', function() {
+
+						element.toggleDisplayAnimate({
+							onStart: function() {
+
+								if(confirm('Are you sure you close the dashboard?')) {
+									element.unbind();
+									return true;
+								}
+
+								return false;
+							}
+						});
+
+					});
+
+					return true;
+				}
+
+				return false;
+			}
 		});
 
 	});

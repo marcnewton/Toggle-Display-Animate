@@ -107,9 +107,9 @@ There are 3 special css class names used for the functionality:
 **Trigger an animation**
 
 ```js
-	$(document).ready(function () {
-		$('#my-element').toggleDisplayAnimate();
-	});
+$(document).ready(function () {
+    $('#my-element').toggleDisplayAnimate();
+});
 ```
 
 `toggleDisplayAnimate` toggles the `.display` class on the element.
