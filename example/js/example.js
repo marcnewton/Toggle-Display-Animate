@@ -79,4 +79,17 @@
 		});
 	};
 
+	$.demoCallbackDelay = function(element)
+	{
+		element.toggleDisplayAnimate({
+			onEnd: function() {
+				element.find('.message').html('Patience is bliss!')
+			},
+			onEndDelay: 2000
+		}).one('click', '.close', function() {
+			element.toggleDisplayAnimate();
+		});
+
+	};
+
 })(jQuery);
