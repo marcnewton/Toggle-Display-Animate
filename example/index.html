@@ -76,14 +76,24 @@
                         <a class="close message">Wait 2 Seconds...</a>
                     </div>
 
-                    <button data-fire="#demo-daisy" data-demo="demoDaisy">Daisy Chain</button>
+                    <button data-fire="#demo-daisy-chain" data-demo="demoDaisyChain">Daisy Chain</button>
 
-                    <div id="demo-daisy" class="demo">
+                    <div id="demo-daisy-chain" class="demo">
                         <div class="close">X</div>
                         <div class="info" id="info-one" data-animate-next="#info-two"></div>
                         <div class="info" id="info-two" data-animate-next="#info-three"></div>
                         <div class="info" id="info-three" data-animate-next="#info-four"></div>
                         <div class="info" id="info-four"></div>
+                    </div>
+
+                    <button data-fire="#demo-daisy-sequence" data-demo="demoDaisySequence">Daisy Sequence</button>
+
+                    <div id="demo-daisy-sequence" class="demo">
+                        <div class="close">X</div>
+                        <div class="info" data-animate-delay="0"></div>
+                        <div class="info" data-animate-delay="250"></div>
+                        <div class="info" data-animate-delay="500"></div>
+                        <div class="info" data-animate-delay="750"></div>
                     </div>
 
                 </section>

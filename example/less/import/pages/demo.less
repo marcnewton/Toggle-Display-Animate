@@ -73,7 +73,7 @@
 	}
 }
 
-#demo-fade, #demo-callback, #demo-delay, #demo-daisy {
+#demo-fade, #demo-callback, #demo-delay, #demo-daisy, #demo-daisy-chain, #demo-daisy-sequence {
 
 	&.animated {
 		.animation('dashboard-fade');
@@ -106,10 +106,9 @@
 		.animation('dashboard-out');
 		.animation-duration(0.5s);
 	}
-
 }
 
-#demo-daisy {
+#demo-daisy-chain, #demo-daisy-sequence {
 
 	> div.info {
 		visibility:hidden;
@@ -125,8 +124,7 @@
 		&.animated {
 			.animation('daisyIn');
 			.animation-duration(0.3s);
+
 		}
 	}
-
 }
-

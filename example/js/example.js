@@ -92,11 +92,20 @@
 
 	};
 
-	$.demoDaisy = function(element)
+	$.demoDaisyChain = function(element)
 	{
 		element.toggleDisplayAnimate({
 			onEnd: function() {
 				$('#info-one').chainAnimation();
+			}
+		});
+	};
+
+	$.demoDaisySequence = function(element)
+	{
+		element.toggleDisplayAnimate({
+			onEnd: function() {
+				element.find('.info').chainAnimation();
 			}
 		});
 	};

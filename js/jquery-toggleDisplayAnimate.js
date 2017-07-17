@@ -83,6 +83,8 @@
 
 	$.fn.chainAnimation = function()
 	{
+		// TODO iterate multiple objects
+		
 		var params;
 		var element = $(this);
 
