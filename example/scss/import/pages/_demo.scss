@@ -1,0 +1,129 @@
+@import "../animation/keyframes-demo";
+
+.demo {
+
+	display:none;
+	z-index:999;
+
+	align-items: center;
+	justify-content: center;
+
+	width:100vw;
+	height:100vh;
+
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+
+	background-color:rgb(250,250,250);
+	font-size:18px;
+
+	> a {
+
+		display:flex;
+		align-items: center;
+		justify-content: center;
+
+		font-size:32px;
+		text-align:center;
+		margin:7px;
+
+		width:300px;
+		height:300px;
+		border-radius:50%;
+
+		color:#fff;
+		background-color:#0f77dc;
+
+		div {
+			display:block;
+			width:64px;
+			height:64px;
+			border-radius:50%;
+			margin:3px auto;
+
+			background-color:#d8d8d8;
+		}
+
+		span {
+			display:block;
+			width: 128px;
+			padding:7px;
+		}
+	}
+
+	div.close {
+		z-index:1000;
+
+		position:fixed;
+		top:0;
+		right:0;
+		margin:14px;
+
+		font-size:24px;
+		text-align:center;
+		line-height:32px;
+		width:32px;
+		height:32px;
+
+		color:rgb(250,250,250);
+		background-color:#d7351f;
+	}
+}
+
+#demo-fade, #demo-callback, #demo-delay, #demo-daisy, #demo-daisy-chain, #demo-daisy-sequence {
+
+	&.animated {
+		@include animation('dashboard-fade');
+		@include animation-duration(0.5s);
+	}
+
+	&.revert {
+		@include animation('dashboard-fade');
+		@include animation-duration(0.3s);
+		@include animation-direction(reverse);
+	}
+
+	&.display {
+		display:flex;
+	}
+}
+
+#demo-slide {
+
+	&.display {
+		display:flex;
+	}
+
+	&.animated {
+		@include animation('dashboard-in');
+		@include animation-duration(0.75s);
+	}
+
+	&.revert {
+		@include animation('dashboard-out');
+		@include animation-duration(0.5s);
+	}
+}
+
+#demo-daisy-chain, #demo-daisy-sequence {
+
+	> div.info {
+		visibility:hidden;
+		margin:7px;
+		width:300px;
+		height:400px;
+		background-color:#0f77dc;
+
+		&.display {
+			visibility:visible;
+		}
+
+		&.animated {
+			@include animation('daisyIn');
+			@include animation-duration(0.3s);
+		}
+	}
+}

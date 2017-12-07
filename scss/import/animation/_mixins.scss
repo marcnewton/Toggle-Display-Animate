@@ -1,0 +1,207 @@
+// https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+@mixin keyframes($name) {
+	@-o-keyframes #{$name} { @content; }
+	@-moz-keyframes #{$name} { @content; }
+	@-webkit-keyframes #{$name} { @content; }
+	@keyframes #{$name} { @content; }
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+@mixin animation ($name, $duration: 300ms, $delay: 0, $ease: ease) {
+	-webkit-animation: $name $duration $delay $ease;
+	-moz-animation:    $name $duration $delay $ease;
+	-ms-animation:     $name $duration $delay $ease;
+	-o-animation:      $name $duration $delay $ease;
+	animation:         $name $duration $delay $ease;
+}
+
+@mixin transition ($transition) {
+	-webkit-transition: $transition;
+	-moz-transition:    $transition;
+	-ms-transition:     $transition;
+	-o-transition:      $transition;
+	transition:         $transition;
+}
+
+@mixin invert() {
+	-webkit-animation-direction: alternate;
+	-moz-animation-directionm: 	 alternate;
+	-ms-animation-direction:     alternate;
+	-o-animation-direction: 	 alternate;
+	animation-direction:         alternate;
+}
+
+@mixin transform($string){
+	-webkit-transform:	$string;
+	-moz-transform:		$string;
+	-ms-transform:		$string;
+	-o-transform:		$string;
+}
+
+@mixin scale ($factor) {
+	-webkit-transform:	scale($factor);
+	-moz-transform:		scale($factor);
+	-ms-transform:		scale($factor);
+	-o-transform:		scale($factor);
+}
+
+@mixin rotate ($deg) {
+	-webkit-transform:	rotate($deg);
+	-moz-transform:		rotate($deg);
+	-ms-transform:		rotate($deg);
+	-o-transform:		rotate($deg);
+}
+
+@mixin skew ($deg, $deg2) {
+	-webkit-transform:	skew($deg, $deg2);
+	-moz-transform:		skew($deg, $deg2);
+	-ms-transform:		skew($deg, $deg2);
+	-o-transform:		skew($deg, $deg2);
+}
+
+@mixin translate ($x, $y:0) {
+	-webkit-transform:	translate($x, $y);
+	-moz-transform:		translate($x, $y);
+	-ms-transform:		translate($x, $y);
+	-o-transform:		translate($x, $y);
+}
+
+@mixin translate3d ($x, $y: 0, $z: 0) {
+	-webkit-transform:	translate3d($x, $y, $z);
+	-moz-transform:		translate3d($x, $y, $z);
+	-ms-transform:		translate3d($x, $y, $z);
+	-o-transform:		translate3d($x, $y, $z);
+}
+
+@mixin perspective ($value: 1000) {
+	-webkit-perspective:$value;
+	-moz-perspective: 	$value;
+	-ms-perspective: 	$value;
+	perspective: 		$value;
+}
+
+@mixin transform-origin ($x:center, $y:center) {
+	-webkit-transform-origin: $x $y;
+	-moz-transform-origin:    $x $y;
+	-ms-transform-origin:     $x $y;
+	-o-transform-origin:      $x $y;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-delay
+@mixin animation-delay($delay) {
+	-o-animation-delay: $delay;
+	-moz-animation-delay: $delay;
+	-webkit-animation-delay: $delay;
+	animation-delay: $delay;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-direction
+@mixin animation-direction($direction) {
+	-o-animation-direction: $direction;
+	-moz-animation-direction: $direction;
+	-webkit-animation-direction: $direction;
+	animation-direction: $direction;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-duration
+@mixin animation-duration($duration) {
+	-o-animation-duration: $duration;
+	-moz-animation-duration: $duration;
+	-webkit-animation-duration: $duration;
+	animation-duration: $duration;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-fill-mode
+@mixin animation-fill-mode($fill) {
+	-o-animation-fill-mode: $fill;
+	-moz-animation-fill-mode: $fill;
+	-webkit-animation-fill-mode: $fill;
+	animation-fill-mode: $fill;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-iteration-count
+@mixin animation-iteration-count($iteration) {
+	-o-animation-iteration-count: $iteration;
+	-moz-animation-iteration-count: $iteration;
+	-webkit-animation-iteration-count: $iteration;
+	animation-iteration-count: $iteration;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-name
+@mixin animation-name($name) {
+	-o-animation-name: $name;
+	-moz-animation-name: $name;
+	-webkit-animation-name: $name;
+	animation-name: $name;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-play-state
+@mixin animation-play-state($state) {
+	-o-animation-play-state: $state;
+	-moz-animation-play-state: $state;
+	-webkit-animation-play-state: $state;
+	animation-play-state: $state;
+}
+
+// https://developer.mozilla.org/en/docs/Web/CSS/animation-timing-function
+@mixin animation-timing-function($timing) {
+	-o-animation-timing-function: $timing;
+	-moz-animation-timing-function: $timing;
+	-webkit-animation-timing-function: $timing;
+	animation-timing-function: $timing;
+}
+
+@mixin transform-origin ($x:center, $y:center) {
+	-o-transform-origin: $x $y;
+	-moz-transform-origin: $x $y;
+	-webkit-transform-origin: $x $y;
+	transform-origin: $x $y;
+}
+
+@mixin perspective ($value: 1000) {
+	//-o-perspective: $value; Not supported?
+	-moz-perspective: $value;
+	-webkit-perspective: $value;
+	perspective: $value;
+}
+
+@mixin scale ($factor) {
+	@include transform(scale($factor));
+}
+
+@mixin rotate ($deg) {
+	@include transform(rotate($deg));
+}
+
+@mixin skew ($deg, $deg2) {
+	@include transform(skew($deg, $deg2));
+}
+
+@mixin translate ($x:0, $y:0) {
+	@include transform(translate($x, $y));
+}
+
+@mixin translateX ($x:0) {
+	@include transform(translateX($x));
+}
+
+@mixin translateY ($y:0) {
+	@include transform(translateY($y));
+}
+
+@mixin translate3d ($x, $y: 0, $z: 0) {
+	@include transform(translate3d($x, $y, $z));
+}
+
+@function sum-opacity($opacity, $value2) {
+	@return $opacity * 100;
+}
+
+@mixin opacity($opacity)
+{
+	/* This works in IE */
+	filter: alpha(opacity=sum-opacity($opacity));
+
+	/* Modern Browsers */
+	opacity: $opacity;
+}
