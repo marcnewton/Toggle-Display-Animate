@@ -100,6 +100,43 @@ There are 3 special css class names used for the functionality:
 }
 ```
 
+**Creating a key frame (SCSS)**
+```scss
+@include keyframes(dashboard-fade) {
+	0% {
+		opacity:0;
+	}
+
+	100% {
+		opacity:1;
+	}
+}
+```
+
+**Applying Animation to element (SCSS)**
+
+```scss
+#my-element {
+
+    display:none;
+
+	&.animated {
+		@include animation(myAnimation);
+		@include animation-duration(0.5s);
+	}
+
+	&.revert {
+		@include animation(myAnimation);
+		@include animation-duration(0.3s);
+		@include animation-direction(reverse);
+	}
+
+	&.display {
+		display:flex;
+	}
+}
+```
+
 **Trigger an animation**
 
 ```js
