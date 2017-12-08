@@ -1,0 +1,18 @@
+.code {
+
+	span {
+
+		&.css {
+
+			color:#9952b5;
+			font-weight:normal;
+
+			> span {
+				color:#62b530;
+			}
+
+		}
+
+	}
+
+}

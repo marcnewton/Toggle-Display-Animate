@@ -41,10 +41,7 @@
 
 	$.demoBasic = function(element)
 	{
-		element.toggleDisplayAnimate().one('click', '.close', function() {
-			element.toggleDisplayAnimate();
-		});
-
+		element.toggleDisplayAnimate();
 	};
 
 	$.demoCallback = function(element)
@@ -55,7 +52,9 @@
 
 				if(confirm('Are you sure you want to open the dashboard?')) {
 
-					element.on('click', '.close', function() {
+					element.on('click', '.close', function(cta) {
+
+						cta.stopPropagation();
 
 						element.toggleDisplayAnimate({
 							onStart: function() {
@@ -86,10 +85,37 @@
 				element.find('.message').html('Patience is bliss!')
 			},
 			onEndDelay: 2000
-		}).one('click', '.close', function() {
-			element.toggleDisplayAnimate();
 		});
 
 	};
+
+	$.demoDaisyChain = function(element)
+	{
+		element.toggleDisplayAnimate({
+			onEnd: function() {
+
+				$('#info-one').chainAnimation();
+
+				element.on('click', '.close-advanced', function(cta) {
+
+					$('#info-four').chainAnimation(true);
+
+				});
+			}
+		});
+	};
+
+	$.demoDaisySequence = function(element)
+	{
+		element.toggleDisplayAnimate({
+			onEnd: function() {
+				element.find('.info').chainAnimation();
+			}
+		});
+	};
+
+	$('.example').on('click', '.close', function() {
+		$(this).parent().toggleDisplayAnimate();
+	});
 
 })(jQuery);
