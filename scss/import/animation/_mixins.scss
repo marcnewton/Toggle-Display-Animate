@@ -7,12 +7,12 @@
 }
 
 // https://developer.mozilla.org/en-US/docs/Web/CSS/animation
-@mixin animation ($name, $duration: 300ms, $delay: 0, $ease: ease) {
-	-webkit-animation: $name $duration $delay $ease;
-	-moz-animation:    $name $duration $delay $ease;
-	-ms-animation:     $name $duration $delay $ease;
-	-o-animation:      $name $duration $delay $ease;
-	animation:         $name $duration $delay $ease;
+@mixin animation ($animation) {
+	-webkit-animation: $animation;
+	-moz-animation:    $animation;
+	-ms-animation:     $animation;
+	-o-animation:      $animation;
+	animation:         $animation;
 }
 
 @mixin transition ($transition) {

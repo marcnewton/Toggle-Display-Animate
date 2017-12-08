@@ -76,12 +76,12 @@
 #demo-fade, #demo-callback, #demo-delay, #demo-daisy, #demo-daisy-chain, #demo-daisy-sequence {
 
 	&.animated {
-		@include animation('dashboard-fade');
+		@include animation(dashboard-fade);
 		@include animation-duration(0.5s);
 	}
 
 	&.revert {
-		@include animation('dashboard-fade');
+		@include animation(dashboard-fade);
 		@include animation-duration(0.3s);
 		@include animation-direction(reverse);
 	}
@@ -98,12 +98,12 @@
 	}
 
 	&.animated {
-		@include animation('dashboard-in');
+		@include animation(dashboard-in);
 		@include animation-duration(0.75s);
 	}
 
 	&.revert {
-		@include animation('dashboard-out');
+		@include animation(dashboard-out);
 		@include animation-duration(0.5s);
 	}
 }
@@ -122,7 +122,7 @@
 		}
 
 		&.animated {
-			@include animation('daisyIn');
+			@include animation(daisyIn);
 			@include animation-duration(0.3s);
 		}
 	}

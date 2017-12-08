@@ -1,3 +1,11 @@
+// https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+.keyframes(@name; @arguments) {
+	@-o-keyframes @name { @arguments(); }
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+
 // https://developer.mozilla.org/en-US/docs/Web/CSS/animation
 .animation(@animation)
 {
@@ -70,15 +78,6 @@
 	-webkit-animation-timing-function: @timing;
 	animation-timing-function: @timing;
 }
-
-// https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
-.keyframes(@name; @arguments) {
-	@-o-keyframes @name { @arguments(); }
-	@-moz-keyframes @name { @arguments(); }
-	@-webkit-keyframes @name { @arguments(); }
-	@keyframes @name { @arguments(); }
-}
-
 
 .transition (@transition) {
 	-o-transition: @transition;
