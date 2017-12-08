@@ -39,14 +39,9 @@
 
 	});
 
-	$('.example').on('click', '.close', function() {
-		$(this).parent().toggleDisplayAnimate();
-	});
-
 	$.demoBasic = function(element)
 	{
 		element.toggleDisplayAnimate();
-
 	};
 
 	$.demoCallback = function(element)
@@ -57,7 +52,9 @@
 
 				if(confirm('Are you sure you want to open the dashboard?')) {
 
-					element.on('click', '.close', function() {
+					element.on('click', '.close', function(cta) {
+
+						cta.stopPropagation();
 
 						element.toggleDisplayAnimate({
 							onStart: function() {
@@ -96,7 +93,14 @@
 	{
 		element.toggleDisplayAnimate({
 			onEnd: function() {
+
 				$('#info-one').chainAnimation();
+
+				element.on('click', '.close-advanced', function(cta) {
+
+					$('#info-four').chainAnimation(true);
+
+				});
 			}
 		});
 	};
@@ -109,5 +113,9 @@
 			}
 		});
 	};
+
+	$('.example').on('click', '.close', function() {
+		$(this).parent().toggleDisplayAnimate();
+	});
 
 })(jQuery);

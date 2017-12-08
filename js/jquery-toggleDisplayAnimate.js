@@ -81,21 +81,34 @@
 
 	$.animationEvents = new animationEvents();
 
-	$.fn.chainAnimation = function()
+	$.fn.chainAnimation = function(inverse, previous)
 	{
 		// TODO iterate multiple objects
-		
+		// TODO get animation chain depth before play and create animation progress with start and end callbacks
+
 		var params;
 		var element = $(this);
 
+		if(typeof inverse === 'undefined') {
+			inverse = false;
+		}
+
+		if(typeof previous === 'object' && typeof element.data('previous') === 'undefined') {
+			element.data('previous', previous);
+		}
+
 		var option = {
-			next: element.data('animate-next'),
+			next: $(element.data('animate-next')),
 			delay: parseInt(element.data('animate-delay'), null),
 			on: element.data('animate-on')
 		};
 
+		if(inverse === true) {
+			option.next = element.data(inverse,previous);
+		}
+
 		var event = function() {
-			$(option.next).chainAnimation();
+			option.next.chainAnimation(element);
 		};
 
 		if(option.on === 'start') {
