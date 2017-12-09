@@ -22,15 +22,15 @@ Modern Browsers, Lightweight, Device Friendly, Skeleton Script.
 
 ## Dependencies
 
-- Any version of [jQuery](http://jquery.com/download/) loaded in the page `<head>` - _Tested with v3.2.1_
-_jQuery only required if you are not using the standalone version_
+- [jQuery](http://jquery.com/download/) Any version of loaded in the page `<head>` - _v3.2.1 Tested_
+- An SCSS or LESS compiler.
 
 ---
 
 ## Quick Installation
 
-Only required file from the project is `js/jquery-toggleDisplayAnimate.js` or `js/toggleDisplayAnimate.js (TODO)`
-
+Only required file from the project is `js/jquery-toggleDisplayAnimate.js`
+Use of the mixins FROM _less_ or _scss_ folder is optional but recommended.
 **jQuery Extension**
 ```html
 <script type="application/javascript" src="js/jquery-toggleDisplayAnimate.js"></script>
@@ -102,7 +102,7 @@ There are 3 special css class names used for the functionality:
 
 **Creating a key frame (SCSS)**
 ```scss
-@include keyframes(dashboard-fade) {
+@include keyframes(myAnimation) {
 	0% {
 		opacity:0;
 	}
