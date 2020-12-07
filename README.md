@@ -4,8 +4,6 @@ Allow keyframe CSS3 animations and reversal of animations to run on elements sty
 
 Modern Browsers, Lightweight, Device Friendly, Skeleton Script. 
 
-[View Demo](http://marcnewton.co.uk/projects/toggle-display-animate/)
-
 [View Project Tasks](https://github.com/marcnewton/Toggle-Display-Animate/issues)
 
 ---
